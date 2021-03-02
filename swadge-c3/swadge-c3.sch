@@ -1861,21 +1861,6 @@ F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-c3-mini-1
 	1    0    0    -1  
 $EndComp
 $Comp
-L Swadge_Parts:QMA6981 U7
-U 1 1 607DB777
-P 2050 6800
-F 0 "U7" H 2250 7250 50  0000 C CNN
-F 1 "QMA6981" H 2350 7150 50  0000 C CNN
-F 2 "Swadge_Parts:QMA6981" H 1850 7500 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/QST-QMA6981_C310611.pdf" H 2050 6750 50  0001 C CNN
-F 4 "LCSC Part #C310611" H 1750 7600 50  0001 C CNN "Digikey"
-F 5 "36" H 1600 7700 50  0001 C CNN "Cost100"
-F 6 "Y" H 1600 7800 50  0001 C CNN "Substitutable"
-F 7 "Use https://lcsc.com/product-detail/Others_QST-QMA6981_C310611.html " H 2050 6800 50  0001 C CNN "Notes"
-	1    2050 6800
-	1    0    0    -1  
-$EndComp
-$Comp
 L Swadge_Parts:C C21
 U 1 1 607DCC9B
 P 3100 7100
@@ -1957,7 +1942,6 @@ $EndComp
 NoConn ~ 2000 7150
 NoConn ~ 2100 7150
 NoConn ~ 2100 6450
-NoConn ~ 2500 6650
 Wire Wire Line
 	2500 6850 3250 6850
 Wire Wire Line
@@ -2569,4 +2553,32 @@ F 3 "" H 1400 6850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 1400 6850
+$Comp
+L power:+3.3V #PWR?
+U 1 1 604057C5
+P 2550 6650
+F 0 "#PWR?" H 2550 6500 50  0001 C CNN
+F 1 "+3.3V" H 2700 6700 50  0000 C CNN
+F 2 "" H 2550 6650 50  0001 C CNN
+F 3 "" H 2550 6650 50  0001 C CNN
+	1    2550 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Swadge_Parts:QMA7981 U7
+U 1 1 607DB777
+P 2050 6800
+F 0 "U7" H 2250 7250 50  0000 C CNN
+F 1 "QMA7981" H 2350 7150 50  0000 C CNN
+F 2 "Swadge_Parts:QMA6981" H 1850 7500 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2004281102_QST-QMA7981_C457290.pdf" H 2050 6750 50  0001 C CNN
+F 4 "LCSC Part #C457290" H 1750 7600 50  0001 C CNN "Digikey"
+F 5 "3082" H 1600 7700 50  0001 C CNN "Cost100"
+F 6 "N" H 1600 7800 50  0001 C CNN "Substitutable"
+F 7 "Use https://lcsc.com/product-detail/Motion-Sensors-Accelerometers_QST-QMA7981_C457290.html" H 2050 6800 50  0001 C CNN "Notes"
+	1    2050 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 6650 2550 6650
 $EndSCHEMATC
