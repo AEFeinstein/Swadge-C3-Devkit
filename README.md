@@ -20,4 +20,4 @@ It's compatible with the [Swadge Programmer](https://github.com/AEFeinstein/Supe
 
 # Schematic
 
-![Schematic](swadge-c3/schematic.svg)
+![Schematic](swadge-c3/schematic.png)
