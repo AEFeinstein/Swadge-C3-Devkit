@@ -1058,20 +1058,6 @@ Text Notes 550  2600 0    50   ~ 0
 ESP32-C3 Circuit
 Wire Notes Line
 	500  4650 500  2500
-$Comp
-L Swadge_Parts:R_US R7
-U 1 1 5C3AEE0E
-P 3650 1500
-F 0 "R7" V 3750 1500 50  0000 C CNN
-F 1 "71.5" V 3536 1500 50  0000 C CNN
-F 2 "Swadge_Parts:R_0603_1608Metric" V 3690 1490 50  0001 C CNN
-F 3 "~" H 3650 1500 50  0001 C CNN
-F 4 "10" H -250 0   50  0001 C CNN "Cost100"
-F 5 "n/a" H -250 0   50  0001 C CNN "Digikey"
-F 6 "Y" H -250 0   50  0001 C CNN "Substitutable"
-	1    3650 1500
-	-1   0    0    1   
-$EndComp
 Text Notes 3500 600  0    50   ~ 0
 LED Circuit
 Text Notes 550  600  0    50   ~ 0
@@ -2310,7 +2296,7 @@ Text GLabel 4800 4550 0    50   Input ~ 0
 IO0_SCL
 Text GLabel 4800 4650 0    50   Input ~ 0
 IO3_SDA
-Text GLabel 8250 3350 0    50   Input ~ 0
+Text GLabel 7600 3350 0    50   Input ~ 0
 IO4_SCU
 Text GLabel 8700 5450 0    50   Input ~ 0
 IO10_SW8
@@ -2318,11 +2304,11 @@ Text GLabel 8700 4700 0    50   Input ~ 0
 IO9_SW6
 Text GLabel 7500 4700 0    50   Input ~ 0
 IO8_SW5
-Text GLabel 8250 3450 0    50   Input ~ 0
+Text GLabel 7600 3450 0    50   Input ~ 0
 IO7_SCR
 Text GLabel 7500 5450 0    50   Input ~ 0
 IO18_SW7
-Text GLabel 8250 3650 0    50   Input ~ 0
+Text GLabel 7600 3650 0    50   Input ~ 0
 IO19_SCL
 Text GLabel 10550 4050 2    50   Input ~ 0
 IO6_BZR
@@ -2476,23 +2462,143 @@ F 3 "" H 8300 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8250 3350 8300 3350
+	7600 3450 8050 3450
 Wire Wire Line
-	8250 3450 8300 3450
-Wire Wire Line
-	8250 3550 8300 3550
-Wire Wire Line
-	8250 3650 8300 3650
+	7600 3550 7850 3550
 Text GLabel 8250 6350 0    50   Input ~ 0
 IO10_SW8
 Text GLabel 10050 3850 0    50   Input ~ 0
 IO5_SCD
 Text GLabel 10550 3850 2    50   Input ~ 0
 IO5_SCD
-Text GLabel 8250 3550 0    50   Input ~ 0
+Text GLabel 7600 3550 0    50   Input ~ 0
 IO5_SCD
 Text GLabel 2600 3550 0    50   Input ~ 0
 IO5_SCD
 Text GLabel 10050 4150 0    50   Input ~ 0
 IO7_SCR
+$Comp
+L Swadge_Parts:R_US R7
+U 1 1 5C3AEE0E
+P 3650 1500
+F 0 "R7" V 3750 1500 50  0000 C CNN
+F 1 "71.5" V 3536 1500 50  0000 C CNN
+F 2 "Swadge_Parts:R_0603_1608Metric" V 3690 1490 50  0001 C CNN
+F 3 "~" H 3650 1500 50  0001 C CNN
+F 4 "10" H -250 0   50  0001 C CNN "Cost100"
+F 5 "n/a" H -250 0   50  0001 C CNN "Digikey"
+F 6 "Y" H -250 0   50  0001 C CNN "Substitutable"
+	1    3650 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Swadge_Parts:R_US R18
+U 1 1 605B9869
+P 8050 3050
+F 0 "R18" V 7950 3200 50  0000 C CNN
+F 1 "1M" V 7950 2950 50  0000 C CNN
+F 2 "Swadge_Parts:R_0603_1608Metric" V 8090 3040 50  0001 C CNN
+F 3 "~" H 8050 3050 50  0001 C CNN
+F 4 "10" H 4150 1550 50  0001 C CNN "Cost100"
+F 5 "n/a" H 4150 1550 50  0001 C CNN "Digikey"
+F 6 "Y" H 4150 1550 50  0001 C CNN "Substitutable"
+	1    8050 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 605BA05B
+P 7950 2850
+F 0 "#PWR0101" H 7950 2700 50  0001 C CNN
+F 1 "+3.3V" H 7800 2950 50  0000 C CNN
+F 2 "" H 7950 2850 50  0001 C CNN
+F 3 "" H 7950 2850 50  0001 C CNN
+	1    7950 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Swadge_Parts:R_US R19
+U 1 1 60627A26
+P 8250 3050
+F 0 "R19" V 8150 3200 50  0000 C CNN
+F 1 "1M" V 8150 2950 50  0000 C CNN
+F 2 "Swadge_Parts:R_0603_1608Metric" V 8290 3040 50  0001 C CNN
+F 3 "~" H 8250 3050 50  0001 C CNN
+F 4 "10" H 4350 1550 50  0001 C CNN "Cost100"
+F 5 "n/a" H 4350 1550 50  0001 C CNN "Digikey"
+F 6 "Y" H 4350 1550 50  0001 C CNN "Substitutable"
+	1    8250 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7600 3350 8250 3350
+$Comp
+L Swadge_Parts:R_US R17
+U 1 1 606430E6
+P 7850 3050
+F 0 "R17" V 7750 3200 50  0000 C CNN
+F 1 "1M" V 7750 2950 50  0000 C CNN
+F 2 "Swadge_Parts:R_0603_1608Metric" V 7890 3040 50  0001 C CNN
+F 3 "~" H 7850 3050 50  0001 C CNN
+F 4 "10" H 3950 1550 50  0001 C CNN "Cost100"
+F 5 "n/a" H 3950 1550 50  0001 C CNN "Digikey"
+F 6 "Y" H 3950 1550 50  0001 C CNN "Substitutable"
+	1    7850 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Swadge_Parts:R_US R16
+U 1 1 606438FB
+P 7650 3050
+F 0 "R16" V 7550 3200 50  0000 C CNN
+F 1 "1M" V 7550 2950 50  0000 C CNN
+F 2 "Swadge_Parts:R_0603_1608Metric" V 7690 3040 50  0001 C CNN
+F 3 "~" H 7650 3050 50  0001 C CNN
+F 4 "10" H 3750 1550 50  0001 C CNN "Cost100"
+F 5 "n/a" H 3750 1550 50  0001 C CNN "Digikey"
+F 6 "Y" H 3750 1550 50  0001 C CNN "Substitutable"
+	1    7650 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8250 3200 8250 3350
+Connection ~ 8250 3350
+Wire Wire Line
+	8250 3350 8300 3350
+Wire Wire Line
+	8050 3200 8050 3450
+Connection ~ 8050 3450
+Wire Wire Line
+	8050 3450 8300 3450
+Wire Wire Line
+	7850 3200 7850 3550
+Connection ~ 7850 3550
+Wire Wire Line
+	7850 3550 8300 3550
+Wire Wire Line
+	7600 3650 7650 3650
+Wire Wire Line
+	7650 3200 7650 3650
+Connection ~ 7650 3650
+Wire Wire Line
+	7650 3650 8300 3650
+Wire Wire Line
+	7650 2900 7650 2850
+Wire Wire Line
+	7650 2850 7850 2850
+Wire Wire Line
+	8250 2850 8250 2900
+Wire Wire Line
+	8050 2900 8050 2850
+Connection ~ 8050 2850
+Wire Wire Line
+	8050 2850 8250 2850
+Wire Wire Line
+	7850 2900 7850 2850
+Connection ~ 7850 2850
+Wire Wire Line
+	7850 2850 7950 2850
+Connection ~ 7950 2850
+Wire Wire Line
+	7950 2850 8050 2850
 $EndSCHEMATC
