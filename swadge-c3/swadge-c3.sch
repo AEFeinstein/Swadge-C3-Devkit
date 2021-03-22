@@ -60,12 +60,10 @@ F 7 "Use piezo buzzer. 1 ~ 25V operating voltage. 12.5mm diameter. 5mm between t
 	1    4700 7150
 	1    0    0    -1  
 $EndComp
-Text GLabel 2600 3550 0    50   Input ~ 0
-IO5_SW3
 Text GLabel 2600 3450 0    50   Input ~ 0
-IO4_SW2
+IO4_SCU
 Text GLabel 2600 3350 0    50   Input ~ 0
-IO10_SW1
+IO10_SW8
 Text GLabel 2600 3250 0    50   Input ~ 0
 IO1_RES
 Text GLabel 2600 2950 0    50   Input ~ 0
@@ -179,24 +177,6 @@ Wire Notes Line
 Wire Notes Line
 	3700 2500 3700 6500
 $Comp
-L Swadge_Parts:4-1437565-2 SW1
-U 1 1 5EC35865
-P 7800 3200
-F 0 "SW1" H 7800 3515 50  0000 C CNN
-F 1 "4-1437565-2" H 7800 3424 50  0000 C CNN
-F 2 "Swadge_Parts:SW_4-1437565-2" H 7800 3200 50  0001 L BNN
-F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=2-1437565-7&DocType=Customer+Drawing&DocLang=English" H 7800 3200 50  0001 L BNN
-F 4 "34" H 250 -150 50  0001 C CNN "Cost100"
-F 5 "450-1759-1-ND" H 250 -150 50  0001 C CNN "Digikey"
-F 6 "Y" H 250 -150 50  0001 C CNN "Substitutable"
-F 7 "Use standard SMT box tactile buttons.  Similar to PTS645SM43SMTR92." H 7800 3200 50  0001 C CNN "Notes"
-	1    7800 3200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8050 3100 8050 3300
-Connection ~ 7550 3100
-$Comp
 L Swadge_Parts:OLED_DISPLAY U6
 U 1 1 5ECC6AE6
 P 5700 6200
@@ -265,13 +245,8 @@ Wire Wire Line
 	10650 1350 10750 1350
 Wire Wire Line
 	10550 1350 10650 1350
-Wire Wire Line
-	7550 3100 7550 3300
-Wire Wire Line
-	7500 3100 7550 3100
 Connection ~ 7550 5450
 Connection ~ 7550 4700
-Connection ~ 7550 3850
 $Comp
 L Swadge_Parts:C C6
 U 1 1 5C3A91E5
@@ -580,22 +555,13 @@ Wire Wire Line
 	8050 4900 8050 4950
 Connection ~ 8050 4900
 Wire Wire Line
-	8050 4050 8050 4100
-Connection ~ 8050 4050
-Wire Wire Line
 	8050 5450 8050 5650
-Wire Wire Line
-	8050 3850 8050 4050
 Wire Wire Line
 	8050 4700 8050 4900
 Wire Wire Line
 	7550 5450 7550 5650
 Wire Wire Line
 	7500 5450 7550 5450
-Wire Wire Line
-	7550 3850 7550 4050
-Wire Wire Line
-	7500 3850 7550 3850
 $Comp
 L power:GND #PWR07
 U 1 1 5C5BAFE0
@@ -605,17 +571,6 @@ F 1 "GND" H 8055 5527 50  0000 C CNN
 F 2 "" H 8050 5700 50  0001 C CNN
 F 3 "" H 8050 5700 50  0001 C CNN
 	1    8050 5700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR03
-U 1 1 5C5BAF63
-P 8050 4100
-F 0 "#PWR03" H 8050 3850 50  0001 C CNN
-F 1 "GND" H 8055 3927 50  0000 C CNN
-F 2 "" H 8050 4100 50  0001 C CNN
-F 3 "" H 8050 4100 50  0001 C CNN
-	1    8050 4100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -631,21 +586,6 @@ F 5 "450-1759-1-ND" H 250 700 50  0001 C CNN "Digikey"
 F 6 "Y" H 250 700 50  0001 C CNN "Substitutable"
 F 7 "Use standard SMT box tactile buttons.  Similar to PTS645SM43SMTR92." H 7800 5550 50  0001 C CNN "Notes"
 	1    7800 5550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Swadge_Parts:4-1437565-2 SW3
-U 1 1 5C5BAE26
-P 7800 3950
-F 0 "SW3" H 7800 4265 50  0000 C CNN
-F 1 "4-1437565-2" H 7800 4174 50  0000 C CNN
-F 2 "Swadge_Parts:SW_4-1437565-2" H 7800 3950 50  0001 L BNN
-F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=2-1437565-7&DocType=Customer+Drawing&DocLang=English" H 7800 3950 50  0001 L BNN
-F 4 "34" H 250 600 50  0001 C CNN "Cost100"
-F 5 "450-1759-1-ND" H 250 600 50  0001 C CNN "Digikey"
-F 6 "Y" H 250 600 50  0001 C CNN "Substitutable"
-F 7 "Use standard SMT box tactile buttons.  Similar to PTS645SM43SMTR92." H 7800 3950 50  0001 C CNN "Notes"
-	1    7800 3950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -2084,45 +2024,8 @@ Wire Wire Line
 	9950 2950 9950 2750
 Wire Wire Line
 	9950 2750 9750 2750
-$Comp
-L Swadge_Parts:4-1437565-2 SW2
-U 1 1 60D156DF
-P 9000 3200
-F 0 "SW2" H 9000 3515 50  0000 C CNN
-F 1 "4-1437565-2" H 9000 3424 50  0000 C CNN
-F 2 "Swadge_Parts:SW_4-1437565-2" H 9000 3200 50  0001 L BNN
-F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=2-1437565-7&DocType=Customer+Drawing&DocLang=English" H 9000 3200 50  0001 L BNN
-F 4 "34" H 1450 -150 50  0001 C CNN "Cost100"
-F 5 "450-1759-1-ND" H 1450 -150 50  0001 C CNN "Digikey"
-F 6 "Y" H 1450 -150 50  0001 C CNN "Substitutable"
-F 7 "Use standard SMT box tactile buttons.  Similar to PTS645SM43SMTR92." H 9000 3200 50  0001 C CNN "Notes"
-	1    9000 3200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9250 3100 9250 3300
-Wire Wire Line
-	9250 3300 9250 3350
-Connection ~ 9250 3300
-Connection ~ 8750 3100
-Wire Wire Line
-	8750 3100 8750 3300
-Wire Wire Line
-	8700 3100 8750 3100
-$Comp
-L power:GND #PWR02
-U 1 1 60D160CD
-P 9250 3350
-F 0 "#PWR02" H 9250 3100 50  0001 C CNN
-F 1 "GND" H 9255 3177 50  0000 C CNN
-F 2 "" H 9250 3350 50  0001 C CNN
-F 3 "" H 9250 3350 50  0001 C CNN
-	1    9250 3350
-	1    0    0    -1  
-$EndComp
 Connection ~ 8750 5450
 Connection ~ 8750 4700
-Connection ~ 8750 3850
 Wire Wire Line
 	9250 5650 9250 5700
 Connection ~ 9250 5650
@@ -2130,22 +2033,13 @@ Wire Wire Line
 	9250 4900 9250 4950
 Connection ~ 9250 4900
 Wire Wire Line
-	9250 4050 9250 4100
-Connection ~ 9250 4050
-Wire Wire Line
 	9250 5450 9250 5650
-Wire Wire Line
-	9250 3850 9250 4050
 Wire Wire Line
 	9250 4700 9250 4900
 Wire Wire Line
 	8750 5450 8750 5650
 Wire Wire Line
 	8700 5450 8750 5450
-Wire Wire Line
-	8750 3850 8750 4050
-Wire Wire Line
-	8700 3850 8750 3850
 $Comp
 L power:GND #PWR08
 U 1 1 60D160E7
@@ -2155,17 +2049,6 @@ F 1 "GND" H 9255 5527 50  0000 C CNN
 F 2 "" H 9250 5700 50  0001 C CNN
 F 3 "" H 9250 5700 50  0001 C CNN
 	1    9250 5700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR04
-U 1 1 60D160F1
-P 9250 4100
-F 0 "#PWR04" H 9250 3850 50  0001 C CNN
-F 1 "GND" H 9255 3927 50  0000 C CNN
-F 2 "" H 9250 4100 50  0001 C CNN
-F 3 "" H 9250 4100 50  0001 C CNN
-	1    9250 4100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -2181,21 +2064,6 @@ F 5 "450-1759-1-ND" H 1450 700 50  0001 C CNN "Digikey"
 F 6 "Y" H 1450 700 50  0001 C CNN "Substitutable"
 F 7 "Use standard SMT box tactile buttons.  Similar to PTS645SM43SMTR92." H 9000 5550 50  0001 C CNN "Notes"
 	1    9000 5550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Swadge_Parts:4-1437565-2 SW4
-U 1 1 60D1610D
-P 9000 3950
-F 0 "SW4" H 9000 4265 50  0000 C CNN
-F 1 "4-1437565-2" H 9000 4174 50  0000 C CNN
-F 2 "Swadge_Parts:SW_4-1437565-2" H 9000 3950 50  0001 L BNN
-F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=2-1437565-7&DocType=Customer+Drawing&DocLang=English" H 9000 3950 50  0001 L BNN
-F 4 "34" H 1450 600 50  0001 C CNN "Cost100"
-F 5 "450-1759-1-ND" H 1450 600 50  0001 C CNN "Digikey"
-F 6 "Y" H 1450 600 50  0001 C CNN "Substitutable"
-F 7 "Use standard SMT box tactile buttons.  Similar to PTS645SM43SMTR92." H 9000 3950 50  0001 C CNN "Notes"
-	1    9000 3950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -2229,11 +2097,11 @@ F 3 "" H 9250 4950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 2600 3750 0    50   Input ~ 0
-IO7_SW4
+IO7_SCR
 Text GLabel 2600 4050 0    50   Input ~ 0
 IO18_SW7
 Text GLabel 2600 4150 0    50   Input ~ 0
-IO19_SW8
+IO19_SCL
 Wire Notes Line
 	7000 2500 9400 2500
 Wire Wire Line
@@ -2431,7 +2299,7 @@ IO8_SW5
 Text GLabel 1100 5300 0    50   Input ~ 0
 IO9_SW6
 Text GLabel 1100 5600 0    50   Input ~ 0
-IO10_SW1
+IO10_SW8
 Text GLabel 1100 6500 0    50   Input ~ 0
 IO3_SDA
 Text GLabel 1350 6300 0    50   Input ~ 0
@@ -2442,30 +2310,26 @@ Text GLabel 4800 4550 0    50   Input ~ 0
 IO0_SCL
 Text GLabel 4800 4650 0    50   Input ~ 0
 IO3_SDA
-Text GLabel 7500 3850 0    50   Input ~ 0
-IO5_SW3
-Text GLabel 8700 3100 0    50   Input ~ 0
-IO4_SW2
-Text GLabel 7500 3100 0    50   Input ~ 0
-IO10_SW1
+Text GLabel 8250 3350 0    50   Input ~ 0
+IO4_SCU
+Text GLabel 8700 5450 0    50   Input ~ 0
+IO10_SW8
 Text GLabel 8700 4700 0    50   Input ~ 0
 IO9_SW6
 Text GLabel 7500 4700 0    50   Input ~ 0
 IO8_SW5
-Text GLabel 8700 3850 0    50   Input ~ 0
-IO7_SW4
+Text GLabel 8250 3450 0    50   Input ~ 0
+IO7_SCR
 Text GLabel 7500 5450 0    50   Input ~ 0
 IO18_SW7
-Text GLabel 8700 5450 0    50   Input ~ 0
-IO19_SW8
+Text GLabel 8250 3650 0    50   Input ~ 0
+IO19_SCL
 Text GLabel 10550 4050 2    50   Input ~ 0
 IO6_BZR
-Text GLabel 10550 3850 2    50   Input ~ 0
-IO5_SW3
 Text GLabel 10550 3750 2    50   Input ~ 0
-IO4_SW2
+IO4_SCU
 Text GLabel 10550 3250 2    50   Input ~ 0
-IO10_SW1
+IO10_SW8
 Text GLabel 10050 3750 0    50   Input ~ 0
 IO1_RES
 Text GLabel 10550 3450 2    50   Input ~ 0
@@ -2479,13 +2343,13 @@ IO2_MIC
 Text GLabel 10550 3550 2    50   Input ~ 0
 IO0_SCL
 Text GLabel 10550 4150 2    50   Input ~ 0
-IO7_SW4
+IO7_SCR
 Text GLabel 10550 4250 2    50   Input ~ 0
 IO18_SW7
 Text GLabel 10550 4550 2    50   Input ~ 0
-IO19_SW8
+IO19_SCL
 Text GLabel 10050 3250 0    50   Input ~ 0
-IO10_SW1
+IO10_SW8
 Text GLabel 10050 3450 0    50   Input ~ 0
 IO3_SDA
 Text GLabel 10050 3150 0    50   Input ~ 0
@@ -2496,34 +2360,16 @@ Text GLabel 10050 3350 0    50   Input ~ 0
 IO2_MIC
 Text GLabel 10050 3550 0    50   Input ~ 0
 IO0_SCL
-Text GLabel 10050 3850 0    50   Input ~ 0
-IO5_SW3
 Text GLabel 10050 4050 0    50   Input ~ 0
 IO6_BZR
-Text GLabel 10050 4150 0    50   Input ~ 0
-IO7_SW4
 Text GLabel 10050 4250 0    50   Input ~ 0
 IO18_SW7
 Text GLabel 10050 4550 0    50   Input ~ 0
-IO19_SW8
+IO19_SCL
 Text Notes 7150 4400 0    50   ~ 0
 SW5 and SW6 have external pullup resistors for booting
-Text Notes 7100 2800 0    50   ~ 0
+Text Notes 7150 4300 0    50   ~ 0
 SW1 has an external pulldown resistor for booting
-$Comp
-L power:+3.3V #PWR0101
-U 1 1 605BBE04
-P 8200 3100
-F 0 "#PWR0101" H 8200 2950 50  0001 C CNN
-F 1 "+3.3V" H 8215 3273 50  0000 C CNN
-F 2 "" H 8200 3100 50  0001 C CNN
-F 3 "" H 8200 3100 50  0001 C CNN
-	1    8200 3100
-	1    0    0    -1  
-$EndComp
-Connection ~ 8050 3100
-Wire Wire Line
-	8050 3100 8200 3100
 $Comp
 L power:+3.3V #PWR060
 U 1 1 60405B62
@@ -2593,8 +2439,6 @@ Text GLabel 8250 6150 0    50   Input ~ 0
 IO9_SW6
 Text GLabel 8250 6250 0    50   Input ~ 0
 IO8_SW5
-Text GLabel 8250 6350 0    50   Input ~ 0
-IO19_SW8
 Wire Wire Line
 	8250 6150 8300 6150
 Wire Wire Line
@@ -2620,4 +2464,35 @@ Wire Notes Line
 	7000 2500 7000 6500
 Wire Notes Line
 	9400 2500 9400 6500
+$Comp
+L Swadge_Parts:scroll-4 SW11
+U 1 1 6059EE03
+P 8400 3500
+F 0 "SW11" H 8719 3551 50  0000 L CNN
+F 1 "scroll-4" H 8719 3460 50  0000 L CNN
+F 2 "Swadge_Parts:scroll-4" H 8400 3150 50  0001 C CNN
+F 3 "" H 8300 3450 50  0001 C CNN
+	1    8400 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 3350 8300 3350
+Wire Wire Line
+	8250 3450 8300 3450
+Wire Wire Line
+	8250 3550 8300 3550
+Wire Wire Line
+	8250 3650 8300 3650
+Text GLabel 8250 6350 0    50   Input ~ 0
+IO10_SW8
+Text GLabel 10050 3850 0    50   Input ~ 0
+IO5_SCD
+Text GLabel 10550 3850 2    50   Input ~ 0
+IO5_SCD
+Text GLabel 8250 3550 0    50   Input ~ 0
+IO5_SCD
+Text GLabel 2600 3550 0    50   Input ~ 0
+IO5_SCD
+Text GLabel 10050 4150 0    50   Input ~ 0
+IO7_SCR
 $EndSCHEMATC
