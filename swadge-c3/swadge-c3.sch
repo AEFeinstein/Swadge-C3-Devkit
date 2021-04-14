@@ -2691,4 +2691,37 @@ F 6 "Y" H 10000 5950 50  0001 C CNN "Substitutible"
 $EndComp
 Text Notes 9450 6250 0    50   ~ 0
 TODO: Use better transistor
+$Comp
+L Swadge_Parts:art_made_by_adam U8
+U 1 1 60790219
+P 5250 6600
+F 0 "U8" H 5250 6700 50  0001 C CNN
+F 1 "art_made_by_adam" H 5250 6600 50  0000 L CNN
+F 2 "Swadge_Parts:made-by-adam" H 5250 6500 50  0001 C CNN
+F 3 "" H 5250 6600 50  0001 C CNN
+	1    5250 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Swadge_Parts:art_mag_logo_metal U9
+U 1 1 60790A55
+P 5250 6700
+F 0 "U9" H 5250 6800 50  0001 C CNN
+F 1 "art_mag_logo_metal" H 5250 6700 50  0000 L CNN
+F 2 "Swadge_Parts:mag-logo-metal" H 5250 6600 50  0001 C CNN
+F 3 "" H 5250 6700 50  0001 C CNN
+	1    5250 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Swadge_Parts:art_swadge_family U10
+U 1 1 6079249F
+P 5300 6800
+F 0 "U10" H 5300 6900 50  0001 C CNN
+F 1 "art_swadge_family" H 5250 6800 50  0000 L CNN
+F 2 "Swadge_Parts:swadges-family" H 5300 6700 50  0001 C CNN
+F 3 "" H 5300 6800 50  0001 C CNN
+	1    5300 6800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
